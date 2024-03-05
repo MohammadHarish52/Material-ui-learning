@@ -1,9 +1,12 @@
 import React from "react";
-import { Button, ButtonGroup, Typography } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
+// import AcUnitIcon from "@mui/icons-material/AcUnit";
+// import SendIcon from "@mui/icons-material/Send";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 export default function Notes() {
   return (
-    <div>
+    <Container>
       <Typography
         variant="h6"
         component="h2"
@@ -18,14 +21,19 @@ export default function Notes() {
         type="submit"
         color="secondary"
         onClick={(e) => alert("Note created")}
+        // startIcon={<SendIcon />}
+        endIcon={<KeyboardArrowRightIcon />}
       >
         Submit
       </Button>
-      {/* <ButtonGroup color="secondary">
-        <Button>Save Draft</Button>
-        <Button>Review</Button>
-        <Button>Watch Later</Button>
-      </ButtonGroup> */}
-    </div>
+      {/* icons
+      <br />
+      <AcUnitIcon />
+      <AcUnitIcon color="secondary" fontSize="large" />
+      <AcUnitIcon color="secondary" fontSize="small" />
+      <AcUnitIcon color="action" fontSize="small" />
+      <AcUnitIcon color="error" fontSize="small" />
+      <AcUnitIcon color="disabled" fontSize="large" /> */}
+    </Container>
   );
 }
