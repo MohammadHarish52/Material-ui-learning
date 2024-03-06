@@ -5,3 +5,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.wrapper {
+  display: flex;
+}
+.layout {
+  background: #fafafa;
+  width: 100%;
+}
+.drawer {
+  width: 240px;
+}
+.drawer_paper {
+  width: 240px;
+}
+.active {
+  background-color: #f4f4f4;
+}

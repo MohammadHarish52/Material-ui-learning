@@ -18,10 +18,10 @@ export default function Notes() {
   };
 
   return (
-    <Container>
-      <Grid container spacing={3}>
+    <Container sx={{ backgroundColor: "#fafafa" }}>
+      <Grid container spacing={3} sx={{ padding: "20px" }}>
         {notes.map((note) => (
-          <Grid key={note.id} item xs={12} md={3} sm={6}>
+          <Grid key={note.id} item xs={12} md={4} sm={6}>
             <NoteCard note={note} handleDelete={handleDelete} />
           </Grid>
         ))}

@@ -7,11 +7,23 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { makeStyles } from "@mui/styles";
+const useStyles = makeStyles({
+  test: {
+    border: (note) => {
+      if (note.category === "work") return "1px solid red";
+      if (note.category === "reminders") return "1px solid green";
+      if (note.category === "todos") return "1px solid blue";
+      if (note.category === "money") return "1px solid purple";
+    },
+  },
+});
 
 const NoteCard = ({ note, handleDelete }) => {
+  const classes = useStyles(note);
   return (
     <div>
-      <Card>
+      <Card elevation={1} className={classes.test}>
         <CardHeader
           action={
             <IconButton onClick={() => handleDelete(note.id)}>
