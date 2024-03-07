@@ -114,7 +114,7 @@ export default function Notes() {
         <ButtonS
           variant="contained"
           type="submit"
-          color="secondary"
+          color="primary"
           // startIcon={<SendIcon />}
           endIcon={<KeyboardArrowRightIcon />}
         >

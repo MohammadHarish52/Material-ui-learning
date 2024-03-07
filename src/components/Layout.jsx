@@ -1,6 +1,7 @@
 import { AddCircleOutlineOutlined, SubjectOutlined } from "@material-ui/icons";
 import {
   AppBar,
+  Avatar,
   Drawer,
   List,
   ListItem,
@@ -31,8 +32,6 @@ const Layout = ({ children }) => {
 
   const navigate = useHistory();
   const location = useLocation();
-  const date = new Date();
-  const TodayDate = date.toString();
 
   const menuItems = [
     {
@@ -53,13 +52,19 @@ const Layout = ({ children }) => {
       <AppBar
         className={classes.appbar}
         sx={{ backgroundColor: "white", color: "black" }}
-        elevation={0.1}
+        elevation={0}
       >
         <Toolbar>
           <Typography className={classes.date}>
-            Today is the {format(new Date(), "do MMMM Y")}
+            Today is the {format(new Date(), "do MMMM y")}
           </Typography>
           <Typography>Tachyon</Typography>
+          <Avatar
+            src="/mario.png"
+            sx={{
+              paddingLeft: "16px",
+            }}
+          />
         </Toolbar>
       </AppBar>
       {/* side bar */}
